@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/js/core.js"></script>
+    <title>Hello VS Code</title>
+</head>
+<body>
+    <h1>JS Rocks!!! Yay!!!</h1>
+    <script>
+        var person = ob.createObservable({ 
+            name: "Can", 
+            surname: "PERK",
+            age: 31
+        });
+
+        person.createComputed("fullName", function () {
+            var p = person.get();
+            return p.name + " " + p.surname;
+        });
+
+        person.set("age", 26);
+        person.set("name", "Gamze");
+        person.set("surname", "Efendioğlu");
+
+        person.print();
+
+        person.set("surname", "Efendi");
+
+        person.print();
+    </script>
+</body>
+</html>
